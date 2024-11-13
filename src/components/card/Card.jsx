@@ -1,20 +1,18 @@
 import Button from '../button/Button.jsx'
 
-export default function card() {
+export default function card(props) {
     return (
         <div className="card">
             <div className="bg">
-                <span className='fine-text'>
-                    600 x 400
-                </span>
+                <img src={props.image} alt="" />
             </div>
             <div className="description">
-                <h3>Titolo del post</h3>
+                <h3>{props.title}</h3>
                 <div className="description-text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Eveniet numquam obcaecati asperiores alias quo blanditiis?
-                    Sapiente quidem, ratione molestiae sequi at impedit minus eos voluptatem doloribus!
-                    Ratione enim maiores ad?
+                    <span> {props.content} </span>
+                </div>
+                <div className='tags'>
+                    {props.tags}
                 </div>
                 <Button />
             </div>
